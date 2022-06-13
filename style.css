@@ -1,0 +1,39 @@
+/* Jede Header-/Daten-Zelle soll
+eine Border bekommen.*/
+
+th,
+td {
+  border: 1px solid lightgrey;
+  padding: 10px;
+  /* text-align: left; */
+}
+/* Tabelle bekommt einen Rand */
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  /* text-align: left; */
+  width: 98vw;
+  table-layout: fixed;
+  /* Doppelränder verschmelzen */
+  /* border-collapse: collapse; */
+}
+/* Die Werte unter 'Amount' verlaufen rechtsbündig */
+td:last-child {
+  text-align: right;
+}
+/* tr {
+  text-align: center;
+} */
+/* Zebra-Styling 
+    nth-child: das x-te Kind-element(td's oder th's) unter den tr's
+    Klammern() mit a als Wert.
+    even: x nimmt den Wert aller geraden Zahlen an.(2,4,6,8,10,...)
+    odd: x nimmt den Wert aller ungeraden Zahlen an.(1,3,5,7,9,11,...)
+*/
+/* Zebra-Styling
+alle geraden Tabellenzeilen mit grauem Hinterground verlegen
+(2. Zeile, 4.Zeile, 6.Zeile, ...)
+*/
+tr:nth-child(even) {
+  background-color: lightgrey;
+}
